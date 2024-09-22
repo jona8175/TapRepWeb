@@ -8,8 +8,8 @@
   <input type="checkbox" id="check">
   <label for="check" class ="checkbtn">
     <ul>
-      <li><a href="/">Welcome</a></li>
-      <li><a href="/blockdiagram">Blockdiagram</a></li>
+      <li><a href="/TapRepWeb">Welcome</a></li>
+      <li><a href="/TapRepWeb/blockdiagram">Blockdiagram</a></li>
       <li><a>Orte</a></li>
       <li><a href="#">Über uns</a></li>
       <li><a href="/help">hilfe</a></li>

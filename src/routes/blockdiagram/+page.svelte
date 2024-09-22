@@ -8,6 +8,19 @@
   //import { gsap } from "gsap";
 
   let root;
+
+
+  let toggle = false
+  let curentVideo = ""
+
+  function openVideo(link) {
+    toggle= true;
+    curentVideo = link;
+  }
+  function closeWindow() {
+		toggle = false;
+	}
+
   onMount(() => {
     const canvas = root.querySelector(".webgl");
     // Do something with nd, such as adding event listeners, styles, etc.
@@ -181,6 +194,8 @@
         renderer.render(scene, camera);
         window.requestAnimationFrame(tick);
       };
+      
+
       tick();
       
       /*function closeVideo() {
@@ -210,7 +225,7 @@
       <div class="text">Im Gletschervorfeld.</div>
     </div>
     <div class="point point-1">
-      <div class="label">UferMoräne</div>
+      <div class="label" on:click={()=>openVideo("https://www.youtube.com/embed/64R2MYUt394")}>UferMoräne</div>
       <div class="text">
         Sie war seitlich vom Gletscher und besteht aus erosions Material vom
         Gletscher und den angrenzenden Berghängen. Nach dem Abschmelzen des
@@ -233,13 +248,14 @@
       <div class="text">Zusatz Text.</div>
     </div>
 
-    <!-- pop up
-    <div id="PopUp" class="PopUp active youtube-player-popup">
-      <button onclick="closeVideo()">Close</button>
-      <iframe id="iframeVid" src="https://www.youtube.com/embed/64R2MYUt394">
+    {#if toggle}
+    <div id="PopUp" class="PopUp active">
+      <button on:click={closeWindow}>Close</button>
+      <iframe id="iframeVid" src={curentVideo}>
       </iframe>
     </div>
-    -->
+    {/if}
+    
   </body>
 </div>
 
@@ -276,7 +292,7 @@
     opacity: 1;
   }
 
-  /*.PopUp {
+  .PopUp {
     position: absolute;
     background-color: blueviolet;
     top: 20%;
@@ -298,5 +314,5 @@
     height: 100%;
     margin-left: auto;
     margin-right: auto;
-  }*/
+  }
 </style>

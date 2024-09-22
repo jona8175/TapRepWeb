@@ -16,7 +16,7 @@
     </ul>
   </label>
   <div class="nav-mobile">
-    <a href="#">Findelen</a>
+    <a href="/TapRepWeb/findelen">Findelen</a>
     <a href="#">Ort</a>
     <a href="#">Orte</a>
   </div>

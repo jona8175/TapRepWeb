@@ -60,7 +60,7 @@
        * Models
        */
 
-      gltfLoader.load("/models/BlockDiagram.gltf", (gltf) => {
+      gltfLoader.load("/TapRepWeb/models/BlockDiagram.gltf", (gltf) => {
         gltf.scene.scale.set(1, 1, 1);
         gltf.scene.rotation.set(0, 0, 0);
         scene.add(gltf.scene);

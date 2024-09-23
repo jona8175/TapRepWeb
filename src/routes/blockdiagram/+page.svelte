@@ -23,7 +23,7 @@
     {
       position: new THREE.Vector3(0.05, 0.15, 0.45),
       canvasCordinates: new THREE.Vector2(3, 0),
-      label: "Sander",
+      label: "Sander1",
       text: "Im Gletschervorfeld.",
     },
     {
@@ -35,8 +35,10 @@
     {
       position: new THREE.Vector3(-0.37, 0.3, 0.05),
       canvasCordinates: new THREE.Vector2(0, 0),
-      label: "Sander",
+      label: "Sander 4",
       text: "Im Gletschervorfeld.",
+      link: "https://www.youtube.com/embed/64R2MYUt394",
+      video: true
     },
     {
       position: new THREE.Vector3(0.05, 0.35, -0.3),
@@ -45,8 +47,6 @@
       text: "Im Gletschervorfeld.",
     },
   ];
-
-
 
   onMount(() => {
     const canvas = root.querySelector(".webgl");
@@ -180,32 +180,36 @@
 
       const tick = () => {
         controls.update();
-        
-        for (const point of points) {
 
+        for (const point of points) {
           // TODO: Bug here, the points are not in the right position
 
           // Get 2D screen position
           const screenPosition = point.position.clone();
+          if (point.label == "Sander1") {
+            console.log("pos");
+            console.log(screenPosition);
+          }
           screenPosition.project(camera);
 
+          if (point.label == "Sander1") {
+            console.log("pos");
+            console.log(screenPosition);
+          }
+
           // Set the raycaster
+          /*
           raycaster.setFromCamera(screenPosition, camera);
           const intersects = raycaster.intersectObjects(scene.children, true);
+          */
 
-
-          const translateX = (0.5-screenPosition.x) * sizes.width * 0.5;
-          const translateY = (0.5+screenPosition.y) * sizes.height * 0.5;
+          const translateX = (0.5 + screenPosition.x * 0.5) * sizes.width;
+          const translateY =
+            (1 - (0.5 + screenPosition.y * 0.5)) * sizes.height;
           point.canvasCordinates.set(translateX, translateY);
 
-
-          console.log(translateX, translateY);
-          points = points;  //normally completely unnecessary, but it triggers a rerender in svelte
-
-          
-          
+          points = points; //normally completely unnecessary, but it triggers a rerender in svelte
         }
-
 
         renderer.render(scene, camera);
         window.requestAnimationFrame(tick);
@@ -220,14 +224,20 @@
   <body>
     <canvas class="webgl"></canvas>
 
-
-    {#each points as {label, text, canvasCordinates}, i}
-      <div class="point" style="left: {canvasCordinates.x}pt; top: {canvasCordinates.y}pt">
-        <div class="label">{label}</div>
-        <div class="text">{text}</div>
+    {#each points as point, i}
+      <div
+        class="point"
+        style="left: {point.canvasCordinates.x}px; top: {point.canvasCordinates.y}px">
+        {#if point.link}
+          <div class="label" on:click={()=> openVideo(point.link)}>{point.label}</div>
+          <div>has Video</div>
+        {:else}
+          <div class="label">{point.label}</div>
+          <div>no Video</div>
+        {/if}
+        <div class="text">{point.text}</div>
       </div>
     {/each}
-
 
     {#if toggle}
       <div id="PopUp" class="PopUp active">
@@ -254,8 +264,6 @@
 
   .point {
     position: absolute;
-    left: 50%;
-    top: 50%;
     /* pointer-events: none; */
     z-index: 10;
   }

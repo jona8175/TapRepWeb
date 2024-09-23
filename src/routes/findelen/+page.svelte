@@ -212,18 +212,6 @@
       
 
       tick();
-      
-      /*function closeVideo() {
-        var element = document.getElementById("PopUp");
-        element.classList.remove("active");
-        document.getElementById("iframeVid").src = "https://www.google.ch";
-      }
-
-      function summonVideo(link) {
-        var element = document.getElementById("PopUp");
-        element.classList.add("active");
-        document.getElementById("iframeVid").src = link;
-      }*/
     }
   });
 </script>

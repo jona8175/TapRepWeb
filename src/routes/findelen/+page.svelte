@@ -72,14 +72,29 @@
       /**
        * Models
        */
+      const blocks = ["Scene5_1.gltf", "Scene5_2.gltf","Scene5_3.gltf", "Scene5_4.gltf","Scene5_5.gltf", "Scene5_6.gltf","Scene5_7.gltf","Scene5_8.gltf"];
 
-      gltfLoader.load("/TapRepWeb/models/Scene5_1.gltf", (gltf) => {
+      for (const block of blocks) {
+        console.log(block)
+        gltfLoader.load("/TapRepWeb/models/" + block, (gltf) => {
+          gltf.scene.scale.set(1, 1, 1);
+          gltf.scene.rotation.set(0, 0, 0);
+          scene.add(gltf.scene);
+
+          updateAllMaterials();
+      });
+      }
+
+
+      /*
+      gltfLoader.load("/models/Scene5_1.gltf", (gltf) => {
         gltf.scene.scale.set(1, 1, 1);
         gltf.scene.rotation.set(0, 0, 0);
         scene.add(gltf.scene);
 
         updateAllMaterials();
-      });
+      });*/
+     
 
       const camera = new THREE.PerspectiveCamera(
         75,
@@ -172,7 +187,7 @@
         controls.update();
 
         for (const point of points) {
-          console.log(point);
+          
 
           // Get 2D screen position
           const screenPosition = point.position.clone();

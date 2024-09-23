@@ -9,17 +9,44 @@
 
   let root;
 
-
-  let toggle = false
-  let curentVideo = ""
+  let toggle = false;
+  let curentVideo = "";
 
   function openVideo(link) {
-    toggle= true;
+    toggle = true;
     curentVideo = link;
   }
   function closeWindow() {
-		toggle = false;
-	}
+    toggle = false;
+  }
+  let points = [
+    {
+      position: new THREE.Vector3(0.05, 0.15, 0.45),
+      canvasCordinates: new THREE.Vector2(3, 0),
+      label: "Sander",
+      text: "Im Gletschervorfeld.",
+    },
+    {
+      position: new THREE.Vector3(-0.25, 0.33, 0.4),
+      canvasCordinates: new THREE.Vector2(0, 0),
+      label: "sda",
+      text: "Im Gletschervorfeld.",
+    },
+    {
+      position: new THREE.Vector3(-0.37, 0.3, 0.05),
+      canvasCordinates: new THREE.Vector2(0, 0),
+      label: "Sander",
+      text: "Im Gletschervorfeld.",
+    },
+    {
+      position: new THREE.Vector3(0.05, 0.35, -0.3),
+      canvasCordinates: new THREE.Vector2(0, 0),
+      label: "Sander",
+      text: "Im Gletschervorfeld.",
+    },
+  ];
+
+
 
   onMount(() => {
     const canvas = root.querySelector(".webgl");
@@ -73,7 +100,7 @@
        * Models
        */
 
-      gltfLoader.load("/TapRepWeb/models/BlockDiagram.gltf", (gltf) => {
+      gltfLoader.load("/models/BlockDiagram.gltf", (gltf) => {
         gltf.scene.scale.set(1, 1, 1);
         gltf.scene.rotation.set(0, 0, 0);
         scene.add(gltf.scene);
@@ -92,24 +119,7 @@
        * Points of interest
        */
       const raycaster = new THREE.Raycaster();
-      const points = [
-        {
-          position: new THREE.Vector3(0.05, 0.15, 0.45),
-          element: document.querySelector(".point-0"),
-        },
-        {
-          position: new THREE.Vector3(-0.25, 0.33, 0.4),
-          element: document.querySelector(".point-1"),
-        },
-        {
-          position: new THREE.Vector3(-0.37, 0.3, 0.05),
-          element: document.querySelector(".point-2"),
-        },
-        {
-          position: new THREE.Vector3(0.05, 0.35, -0.3),
-          element: document.querySelector(".point-3"),
-        },
-      ];
+
       /**
        * Lights
        */
@@ -170,9 +180,10 @@
 
       const tick = () => {
         controls.update();
-
+        
         for (const point of points) {
-          console.log(point);
+
+          // TODO: Bug here, the points are not in the right position
 
           // Get 2D screen position
           const screenPosition = point.position.clone();
@@ -182,33 +193,25 @@
           raycaster.setFromCamera(screenPosition, camera);
           const intersects = raycaster.intersectObjects(scene.children, true);
 
-          point.element.classList.add("visible"); //add this and comment out the if else so tags allways show
 
-          const translateX = screenPosition.x * sizes.width * 0.5;
-          const translateY = -screenPosition.y * sizes.height * 0.5;
-          point.element.style.transform = `translateX(${translateX}px) translateY(${translateY}px)`;
+          const translateX = (0.5-screenPosition.x) * sizes.width * 0.5;
+          const translateY = (0.5+screenPosition.y) * sizes.height * 0.5;
+          point.canvasCordinates.set(translateX, translateY);
+
+
+          console.log(translateX, translateY);
+          points = points;  //normally completely unnecessary, but it triggers a rerender in svelte
+
+          
+          
         }
 
-        // TODO: Implement points and Loading
 
         renderer.render(scene, camera);
         window.requestAnimationFrame(tick);
       };
-      
 
       tick();
-      
-      /*function closeVideo() {
-        var element = document.getElementById("PopUp");
-        element.classList.remove("active");
-        document.getElementById("iframeVid").src = "https://www.google.ch";
-      }
-
-      function summonVideo(link) {
-        var element = document.getElementById("PopUp");
-        element.classList.add("active");
-        document.getElementById("iframeVid").src = link;
-      }*/
     }
   });
 </script>
@@ -216,46 +219,22 @@
 <div bind:this={root} class="bind-div">
   <body>
     <canvas class="webgl"></canvas>
-    <div class="point point-0">
-      <div
-        class="label"
-      >
-        Sander
+
+
+    {#each points as {label, text, canvasCordinates}, i}
+      <div class="point" style="left: {canvasCordinates.x}pt; top: {canvasCordinates.y}pt">
+        <div class="label">{label}</div>
+        <div class="text">{text}</div>
       </div>
-      <div class="text">Im Gletschervorfeld.</div>
-    </div>
-    <div class="point point-1">
-      <div class="label" on:click={()=>openVideo("https://www.youtube.com/embed/64R2MYUt394")}>UferMoräne</div>
-      <div class="text">
-        Sie war seitlich vom Gletscher und besteht aus erosions Material vom
-        Gletscher und den angrenzenden Berghängen. Nach dem Abschmelzen des
-        Gletschers ebleibt ein Wall am Hangfuß des Tals.
-      </div>
-    </div>
-    <div class="point point-2">
-      <div
-        class="label"
-      >
-        See
-      </div>
-      <div class="text">Durch die Moräne angestaut.</div>
-    </div>
-    <div class="point point-3">
-      <div
-        class="label">
-        Gletscher
-      </div>
-      <div class="text">Zusatz Text.</div>
-    </div>
+    {/each}
+
 
     {#if toggle}
-    <div id="PopUp" class="PopUp active">
-      <button on:click={closeWindow}>Close</button>
-      <iframe id="iframeVid" src={curentVideo}>
-      </iframe>
-    </div>
+      <div id="PopUp" class="PopUp active">
+        <button on:click={closeWindow}>Close</button>
+        <iframe id="iframeVid" src={curentVideo}> </iframe>
+      </div>
     {/if}
-    
   </body>
 </div>
 
@@ -275,8 +254,8 @@
 
   .point {
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     /* pointer-events: none; */
     z-index: 10;
   }

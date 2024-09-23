@@ -179,9 +179,7 @@
     <canvas class="webgl"></canvas>
 
     {#each points as point, i}
-      <div
-        class="point"
-        style="left: {point.canvasCordinates.x}px; top: {point.canvasCordinates.y}px">
+      <div class="point" style="left: {point.canvasCordinates.x}px; top: {point.canvasCordinates.y}px">
         {#if point.link}
           <div class="label" on:click={()=> openVideo(point.link)}>{point.label}</div>
         {:else}
@@ -192,8 +190,8 @@
     {/each}
 
     {#if toggle}
-      <div id="PopUp" class="PopUp active">
-        <button on:click={closeWindow}>Close</button>
+      <div id="PopUp" class="PopUp">
+        <button class="close" on:click={closeWindow}>x</button>
         <iframe id="iframeVid" src={curentVideo}> </iframe>
       </div>
     {/if}
@@ -218,31 +216,38 @@
     position: absolute;
     /* pointer-events: none; */
     z-index: 10;
+    background-color: rgba(220, 220, 220, 0.594);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
   }
 
   .point .label {
+    
   }
 
   .point .text {
     opacity: 0;
+    height: 0;
+    width: 0;
   }
 
   .point:hover .text {
     opacity: 1;
+    height: auto;
+    width: auto;
   }
 
   .PopUp {
     position: absolute;
-    background-color: blueviolet;
+    background-color: gainsboro;
+    padding: 1rem;
     top: 20%;
     left: 20%;
     width: 60%;
     height: 60%;
     z-index: -20;
-    opacity: 0;
     pointer-events: none;
-  }
-  .PopUp.active {
+    border-radius: 1rem;
     opacity: 1;
     pointer-events: auto;
     z-index: 30;
@@ -253,5 +258,19 @@
     height: 100%;
     margin-left: auto;
     margin-right: auto;
+    border: none;
   }
+  
+  .close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+  }
+  
+    
 </style>

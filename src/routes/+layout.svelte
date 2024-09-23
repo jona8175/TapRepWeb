@@ -35,6 +35,8 @@
   --accent_prim:darkblue;
   --accent_sec:lightblue;
   --text-col:white;
+  
+  font-family: Helvetica, sans-serif;
 }
 
 .menu{

@@ -38,7 +38,6 @@
       label: "Sander 4",
       text: "Im Gletschervorfeld.",
       link: "https://www.youtube.com/embed/64R2MYUt394",
-      video: true
     },
     {
       position: new THREE.Vector3(0.05, 0.35, -0.3),
@@ -53,35 +52,7 @@
     // Do something with nd, such as adding event listeners, styles, etc.
 
     if (browser) {
-      const loadingManager = new THREE.LoadingManager(
-        // Loaded
-        () => {
-          // Wait a little
-          window.setTimeout(() => {
-            // Animate overlay
-            gsap.to(overlayMaterial.uniforms.uAlpha, {
-              duration: 3,
-              value: 0,
-              delay: 1,
-            });
-
-            // Update loadingBarElement
-            loadingBarElement.classList.add("ended");
-            loadingBarElement.style.transform = "";
-          }, 500);
-
-          window.setTimeout(() => {
-            sceneReady = true;
-          }, 2000);
-        },
-
-        // Progress
-        (itemUrl, itemsLoaded, itemsTotal) => {
-          // Calculate the progress and update the loadingBarElement
-          const progressRatio = itemsLoaded / itemsTotal;
-          loadingBarElement.style.transform = `scaleX(${progressRatio})`;
-        }
-      );
+      const loadingManager = new THREE.LoadingManager();
 
       const gltfLoader = new GLTFLoader(loadingManager);
       const cubeTextureLoader = new THREE.CubeTextureLoader(loadingManager);
@@ -104,8 +75,6 @@
         gltf.scene.scale.set(1, 1, 1);
         gltf.scene.rotation.set(0, 0, 0);
         scene.add(gltf.scene);
-
-        updateAllMaterials();
       });
 
       const camera = new THREE.PerspectiveCamera(
@@ -178,31 +147,16 @@
 
       camera.position.z = 5;
 
+
+
+
       const tick = () => {
         controls.update();
 
         for (const point of points) {
-          // TODO: Bug here, the points are not in the right position
-
           // Get 2D screen position
           const screenPosition = point.position.clone();
-          if (point.label == "Sander1") {
-            console.log("pos");
-            console.log(screenPosition);
-          }
           screenPosition.project(camera);
-
-          if (point.label == "Sander1") {
-            console.log("pos");
-            console.log(screenPosition);
-          }
-
-          // Set the raycaster
-          /*
-          raycaster.setFromCamera(screenPosition, camera);
-          const intersects = raycaster.intersectObjects(scene.children, true);
-          */
-
           const translateX = (0.5 + screenPosition.x * 0.5) * sizes.width;
           const translateY =
             (1 - (0.5 + screenPosition.y * 0.5)) * sizes.height;
@@ -230,10 +184,8 @@
         style="left: {point.canvasCordinates.x}px; top: {point.canvasCordinates.y}px">
         {#if point.link}
           <div class="label" on:click={()=> openVideo(point.link)}>{point.label}</div>
-          <div>has Video</div>
         {:else}
           <div class="label">{point.label}</div>
-          <div>no Video</div>
         {/if}
         <div class="text">{point.text}</div>
       </div>

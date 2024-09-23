@@ -29,15 +29,15 @@
     },
   ];
 
-  let models = []
+  let models = ["BlockDiagram.gltf"];
 
-  let cameraInitialPosition = new THREE.Vector3(0, 0, 5);
 
-  let scene_background_color = "black";
+
+
 </script>
 
 
 
-<GeoScene points = {points} models = {models} cameraInitialPosition = {cameraInitialPosition} scene_background_color = {scene_background_color}/>
+<GeoScene points = {points} models = {models}/>
 
 

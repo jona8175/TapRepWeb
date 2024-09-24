@@ -21,7 +21,7 @@
   }
 
   export let points = [];
-  export const cameraInitialPosition = new THREE.Vector3(0, 3, 5);
+  export let cameraInitialPosition = new THREE.Vector3(0, 3, 5);
   export let scene_background_color = "#ffffff";
 
   export let models = [];
@@ -56,7 +56,7 @@
       for (const block of models) {
         console.log(block);
         //add /TapRepWeb when deploying
-        gltfLoader.load("/models/" + block , (gltf) => {
+        gltfLoader.load("/TapRepWeb/models/" + block , (gltf) => {
           gltf.scene.scale.set(1, 1, 1);
           gltf.scene.rotation.set(0, 0, 0);
           scene.add(gltf.scene);
@@ -82,7 +82,7 @@
        * Lights
        */
       const directionalLight = new THREE.DirectionalLight("#ffffff", 3);
-      directionalLight.castShadow = true;
+      directionalLight.castShadow = false;
       directionalLight.shadow.camera.far = 15;
       directionalLight.shadow.mapSize.set(1024, 1024);
       directionalLight.shadow.normalBias = 0.05;
@@ -227,7 +227,7 @@
   .point:hover .text {
     opacity: 1;
     height: auto;
-    width: auto;
+    width:  300px;
   }
 
   .PopUp {

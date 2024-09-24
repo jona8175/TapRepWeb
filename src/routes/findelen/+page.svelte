@@ -2,42 +2,25 @@
   import * as THREE from "three";
   import GeoScene from "$lib/geoScene.svelte";
   let points = [
+    
     {
-      position: new THREE.Vector3(0.05, 0.15, 0.45),
-      canvasCordinates: new THREE.Vector2(3, 0),
-      label: "Sander1",
-      text: "Im Gletschervorfeld.",
-    },
-    {
-      position: new THREE.Vector3(-0.25, 0.33, 0.4),
+      position: new THREE.Vector3(0.15, 0.7, -0.6),
       canvasCordinates: new THREE.Vector2(0, 0),
-      label: "sda",
-      text: "Im Gletschervorfeld.",
-    },
-    {
-      position: new THREE.Vector3(-0.37, 0.3, 0.05),
-      canvasCordinates: new THREE.Vector2(0, 0),
-      label: "Sander 4",
-      text: "Im Gletschervorfeld.",
-      link: "https://www.youtube.com/embed/64R2MYUt394",
-    },
-    {
-      position: new THREE.Vector3(0.05, 0.35, -0.3),
-      canvasCordinates: new THREE.Vector2(0, 0),
-      label: "Sander",
-      text: "Im Gletschervorfeld.",
+      label: "Demo",
+      text: "Click to watch a demo video",
+      link: "https://www.youtube.com/embed/bcB4zxubK-0",
     },
   ];
 
-  let models = ["Scene5_1.gltf","Scene5_2.gltf","Scene5_3.gltf"];
+  let models = ["Scene5_1.gltf","Scene5_2.gltf","Scene5_3.gltf","Scene5_4.gltf","Scene5_5.gltf","Scene5_6.gltf","Scene5_7.gltf","Scene5_8.gltf"];
 
-
+  let cameraInitialPosition = new THREE.Vector3(-2,1,1);
 
 
 </script>
 
 
 
-<GeoScene points = {points} models = {models}/>
+<GeoScene points = {points} models = {models} cameraInitialPosition = {cameraInitialPosition}/>
 
 

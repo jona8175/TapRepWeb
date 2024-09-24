@@ -56,7 +56,7 @@
       for (const block of models) {
         console.log(block);
         //add /TapRepWeb when deploying
-        gltfLoader.load("/TapRepWeb/models/" + block , (gltf) => {
+        gltfLoader.load("/models/" + block , (gltf) => {
           gltf.scene.scale.set(1, 1, 1);
           gltf.scene.rotation.set(0, 0, 0);
           scene.add(gltf.scene);

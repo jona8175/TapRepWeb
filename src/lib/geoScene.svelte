@@ -23,6 +23,7 @@
   export let points = [];
   export let cameraInitialPosition = new THREE.Vector3(0, 3, 5);
   export let scene_background_color = "#ffffff";
+  export let light_type = "";
 
   export let models = [];
       //only works when file is in static/models
@@ -56,7 +57,7 @@
       for (const block of models) {
         console.log(block);
         //add /TapRepWeb when deploying
-        gltfLoader.load("/TapRepWeb/models/" + block , (gltf) => {
+        gltfLoader.load("/models/" + block , (gltf) => {
           gltf.scene.scale.set(1, 1, 1);
           gltf.scene.rotation.set(0, 0, 0);
           scene.add(gltf.scene);
@@ -80,14 +81,27 @@
 
       /**
        * Lights
-       */
-      const directionalLight = new THREE.DirectionalLight("#ffffff", 3);
-      directionalLight.castShadow = false;
-      directionalLight.shadow.camera.far = 15;
-      directionalLight.shadow.mapSize.set(1024, 1024);
-      directionalLight.shadow.normalBias = 0.05;
-      directionalLight.position.set(0.25, 3, -2.25);
-      scene.add(directionalLight);
+      */
+
+      
+      if (light_type == "3DModel") {
+        const directionalLight = new THREE.DirectionalLight("#ffffff", 3);
+        directionalLight.castShadow = false;
+        directionalLight.shadow.camera.far = 15;
+        directionalLight.shadow.mapSize.set(1024, 1024);
+        directionalLight.shadow.normalBias = 0.05;
+        directionalLight.position.set(0.25, 3, -2.25);
+        scene.add(directionalLight);
+      } else if (light_type == "DroneImageScene") {
+        const light = new THREE.AmbientLight( 0x404040 ); // soft white light
+        light.intensity = 25
+        scene.add( light );
+      }
+
+      
+     
+
+      
 
       // Controls
       const controls = new OrbitControls(camera, canvas);
@@ -208,26 +222,33 @@
 
   .point {
     position: absolute;
+    font-size: 8pt;
     /* pointer-events: none; */
     z-index: 10;
     background-color: rgba(220, 220, 220, 0.594);
     padding: 0.5rem;
     border-radius: 0.5rem;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
   }
 
   .point .label {
+    user-select: none;
   }
 
   .point .text {
     opacity: 0;
     height: 0;
     width: 0;
+    user-select: none;
   }
 
   .point:hover .text {
     opacity: 1;
     height: auto;
     width:  300px;
+    user-select: none;
   }
 
   .PopUp {
@@ -244,6 +265,7 @@
     opacity: 1;
     pointer-events: auto;
     z-index: 30;
+    user-select: none;
   }
   iframe {
     display: block;

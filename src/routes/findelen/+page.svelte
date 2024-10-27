@@ -16,11 +16,13 @@
 
   let cameraInitialPosition = new THREE.Vector3(-2,1,1);
 
+  let light_type = "DroneImageScene" /*DroneImageScene or 3DModel*/
+
 
 </script>
 
 
 
-<GeoScene points = {points} models = {models} cameraInitialPosition = {cameraInitialPosition}/>
+<GeoScene points = {points} models = {models} cameraInitialPosition = {cameraInitialPosition} light_type = {light_type}/>
 
 

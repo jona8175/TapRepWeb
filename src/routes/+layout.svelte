@@ -8,17 +8,19 @@
   <input type="checkbox" id="check">
   <label for="check" class ="checkbtn">
     <ul>
-      <li><a href="/TapRepWeb">Welcome</a></li>
-      <li><a href="/TapRepWeb/blockdiagram">Blockdiagram</a></li>
+      <li><a href="/wilkommen">Wilkommen</a></li>
+      <li><a href="/blockdiagram">Blockdiagram</a></li>
       <li><a>Orte</a></li>
-      <li><a href="#">Über uns</a></li>
-      <li><a href="/help">hilfe</a></li>
+      <li><a href="#">Impressum</a></li>
+      <li><a href="/help">Hilfe</a></li>
+      <li><a href="/Quellen">Quellen</a></li>
     </ul>
   </label>
+  
+  
   <div class="nav-mobile">
-    <a href="/TapRepWeb/findelen">Findelen</a>
-    <a href="#">Ort</a>
-    <a href="#">Orte</a>
+      <a href="/findelen">Findelen</a>
+      <a href="/grindelwald">Grindelwald</a>
   </div>
 </nav>
 
@@ -46,6 +48,7 @@
   left: 0;
   height: 55px;
   flex-direction: row;
+  
 }
 
 .bar{
@@ -56,6 +59,7 @@
   width: 100%;
   height: 55px;
   background-color:var(--background_prim);
+  
 }
 
 .scene{
@@ -63,6 +67,7 @@
   position: absolute;
   top: 0;
   left: 0;
+
 }
 
 ul {
@@ -83,12 +88,13 @@ li a {
   display: block;
   color: var(--text-col);
   text-align: center;
-  padding: 15px 15px;
+  padding: 16px 16px;
   text-decoration: none;
 }
 
 li a:hover {
   background-color: var(--accent_prim);
+  transition: background-color 0.4s;
 }
 
 /*burger menu*/
@@ -111,13 +117,16 @@ li a:hover {
   display: none;
 }
 
-#check:checked ~ .nav-mobile{display: block ;}
+#check:checked ~ .nav-mobile{
+  display: block ;
+  transition: background-color 1s;
+}
 
 .nav-mobile {
   display: none;
   position: absolute;
   top: 55px;
-  margin-left: 248px;
+  margin-left: 290px;
   overflow: hidden;
   background: var(--background_sec);
   z-index: 1;
@@ -125,6 +134,7 @@ li a:hover {
 }
 .nav-mobile a:hover {
   background: var(--accent_sec);
+  transition: background-color 0.8s;
 }
 
 .nav-mobile a {
@@ -147,6 +157,7 @@ li a:hover {
   display: flex;
   flex-direction: column;
 }
+
 </style>
 
 <script>

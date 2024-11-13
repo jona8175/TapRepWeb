@@ -22,13 +22,14 @@
 
   export let points = [];
   export let cameraInitialPosition = new THREE.Vector3(0, 3, 5);
-  export let scene_background_color = "#ffffff";
+  export let scene_background_color = "#b7d9eb";
   export let light_type = "";
 
   export let models = [];
       //only works when file is in static/models
 
   onMount(() => {
+    
     const canvas = root.querySelector(".webgl");
     // Do something with nd, such as adding event listeners, styles, etc.
 
@@ -173,6 +174,7 @@
 
       tick();
     }
+    
   });
 </script>
 
@@ -207,10 +209,13 @@
 </div>
 
 <style>
+   
   body {
     height: 100%;
+    width: 100%;
     overflow: hidden;
   }
+  
   .webgl {
     position: static;
     top: 0;
@@ -218,6 +223,8 @@
     outline: none;
     z-index: -10;
     height: 100%;
+    width: 100%;
+    overflow: hidden;
   }
 
   .point {
@@ -231,10 +238,12 @@
     -webkit-user-select: none; /* Safari */
     -ms-user-select: none; /* IE 10 and IE 11 */
     user-select: none; /* Standard syntax */
+    overflow: hidden;
   }
 
   .point .label {
     user-select: none;
+    overflow: hidden;
   }
 
   .point .text {
@@ -242,6 +251,7 @@
     height: 0;
     width: 0;
     user-select: none;
+    overflow: hidden;
   }
 
   .point:hover .text {
@@ -249,6 +259,7 @@
     height: auto;
     width:  300px;
     user-select: none;
+    overflow: hidden;
   }
 
   .PopUp {
@@ -266,6 +277,7 @@
     pointer-events: auto;
     z-index: 30;
     user-select: none;
+    overflow: hidden;
   }
   iframe {
     display: block;
@@ -274,6 +286,7 @@
     margin-left: auto;
     margin-right: auto;
     border: none;
+    overflow: hidden;
   }
 
   .close {
@@ -285,5 +298,8 @@
     border: none;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    overflow: hidden;
   }
+  
+
 </style>

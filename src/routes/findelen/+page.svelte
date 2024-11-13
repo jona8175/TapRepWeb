@@ -12,7 +12,7 @@
     },
   ];
 
-  let models = ["Scene5_1.gltf","Scene5_2.gltf","Scene5_3.gltf","Scene5_4.gltf","Scene5_5.gltf","Scene5_6.gltf","Scene5_7.gltf","Scene5_8.gltf"];
+  let models = ["Scene1.gltf","Scene2.gltf","Scene3.gltf","Scene4.gltf","Scene5.gltf","Scene6.gltf","Scene7.gltf","Scene8.gltf","Scene9.gltf","Scene10.gltf"];
 
   let cameraInitialPosition = new THREE.Vector3(-2,1,1);
 

@@ -58,13 +58,8 @@
 
   let cameraInitialPosition = new THREE.Vector3(2,1,1);
 
-
-
-
 </script>
 
 
-
 <GeoScene points = {points} models = {models} light_type = {light_type} cameraInitialPosition = {cameraInitialPosition}/>
-
 

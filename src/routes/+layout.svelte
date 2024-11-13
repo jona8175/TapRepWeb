@@ -1,9 +1,7 @@
 <!-- Hier wird das menu erstelt was wir across all pages benutzen, 
  an dieser stelle könnten ähnlich dinge gemacht werden-->
-
-
-<div class = "bar">
-</div>
+<div class = "scrollwrap">
+<div class = "bar"></div>
 <nav class = "menu">
   <input type="checkbox" id="check">
   <label for="check" class ="checkbtn">
@@ -27,6 +25,8 @@
 <!-- im slot ist der inhalt der sub-page-->
 <div class = "scene">
   <slot></slot>
+</div>
+
 </div>
 
 <style>
@@ -157,6 +157,8 @@ li a:hover {
   display: flex;
   flex-direction: column;
 }
+
+
 
 </style>
 

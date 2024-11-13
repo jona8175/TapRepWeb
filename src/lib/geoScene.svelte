@@ -209,7 +209,7 @@
 </div>
 
 <style>
-   
+
   body {
     height: 100%;
     width: 100%;
@@ -224,6 +224,8 @@
     z-index: -10;
     height: 100%;
     width: 100%;
+    display:flex;
+    flex-flow: stretch; /*important for stretch bug*/
     overflow: hidden;
   }
 

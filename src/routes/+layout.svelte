@@ -1,33 +1,59 @@
 <!-- Hier wird das menu erstelt was wir across all pages benutzen, 
  an dieser stelle könnten ähnlich dinge gemacht werden-->
-<div class = "scrollwrap">
+
 <div class = "bar"></div>
 <nav class = "menu">
   <input type="checkbox" id="check">
   <label for="check" class ="checkbtn">
     <ul>
-      <li><a href="/wilkommen">Wilkommen</a></li>
-      <li><a href="/blockdiagram">Blockdiagram</a></li>
+      <li><a href="/wilkommen" on:click={() => toggleStyle(true)}>Wilkommen</a></li>
+      <li><a href="/blockdiagram" on:click={() => toggleStyle(false)}>Blockdiagram</a></li>
       <li><a>Orte</a></li>
-      <li><a href="#">Impressum</a></li>
-      <li><a href="/help">Hilfe</a></li>
-      <li><a href="/Quellen">Quellen</a></li>
+      <li><a href="#" on:click={() => toggleStyle(true)}>Impressum</a></li>
+      <li><a href="/help" on:click={() => toggleStyle(true)}>Hilfe</a></li>
+      <li><a href="/Quellen" on:click={() => toggleStyle(true)}>Quellen</a></li>
     </ul>
   </label>
   
   
   <div class="nav-mobile">
-      <a href="/findelen">Findelen</a>
-      <a href="/grindelwald">Grindelwald</a>
+      <a href="/findelen" on:click={() => toggleStyle(false)}>Findelen</a>
+      <a href="/grindelwald" on:click={() => toggleStyle(false)}>Grindelwald</a>
   </div>
 </nav>
+
+<!--Help-->
+<div class="helpbox {isStyled ? 'styled' : ''}">
+  <div>
+    <h1>Help</h1>
+    <a>Beim Navigieren den Cursor nicht über Text Elementen halten.</a>
+    <br>
+    <br>
+    <a>Navigieren:</a><br>
+    <a> Scrollen um die grösse zu ändern.</a><br>
+    <a>Rechtsklick gedrückt halten und Maus bewegen um zu rotieren. </a><br>
+    <a>Shift & Rechtsklick gedrückt halten und Maus bewegen um das Model zu verschieben. </a><br>
+    <a on:click={() => toggleStyle(true)}>close</a>
+  </div>
+  
+</div>
 
 <!-- im slot ist der inhalt der sub-page-->
 <div class = "scene">
   <slot></slot>
 </div>
 
-</div>
+<script>
+  let scene =1;
+
+  let isStyled = false; // Function to toggle the style 
+
+  function toggleStyle(a) { 
+    isStyled = a;
+  }
+
+
+</script>
 
 <style>
 /* Menu stuff*/
@@ -132,6 +158,8 @@ li a:hover {
   z-index: 1;
   width: 200px;
 }
+
+
 .nav-mobile a:hover {
   background: var(--accent_sec);
   transition: background-color 0.8s;
@@ -158,10 +186,32 @@ li a:hover {
   flex-direction: column;
 }
 
+.helpbox{
+  
+  z-index: 4;
+  position: absolute;
+  top: 100px;
+  right: 20px;
+  height: 400px;
+  width: 200px;
+  flex-direction: column;
+  background-color: beige;
+  visibility: visible;
+}
+
+/* Additional style when isStyled is true */ 
+.helpbox.styled {
+  visibility: hidden;
+}
+.helpbox div{
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.helpbox a{
+  color: blue;
+}
+
 
 
 </style>
 
-<script>
-  let scene =1;
-</script>

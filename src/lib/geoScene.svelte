@@ -256,12 +256,18 @@
     overflow: hidden;
   }
 
+  .point:hover {
+    background-color: rgba(217, 227, 219, 0.984);
+    z-index: 11;
+  }
+
   .point:hover .text {
     opacity: 1;
     height: auto;
-    width:  300px;
+    width:  150px;
     user-select: none;
     overflow: hidden;
+    
   }
 
   .PopUp {

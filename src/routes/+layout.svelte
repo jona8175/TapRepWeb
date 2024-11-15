@@ -1,7 +1,11 @@
 <!-- Hier wird das menu erstelt was wir across all pages benutzen, 
  an dieser stelle könnten ähnlich dinge gemacht werden-->
 
+
+<Menu menupoints = {menureiter}></Menu>
+
 <div class = "bar"></div>
+
 <nav class = "menu">
   <input type="checkbox" id="check">
   <label for="check" class ="checkbtn">
@@ -15,9 +19,8 @@
     </ul>
   </label>
   
-  
   <div class="nav-mobile">
-      <a href="/findelen" on:click={() => toggleStyle(false)}>Findelen</a>
+      <a href="/findelen" on:click={() => toggleStyle(false)}>findelen</a>
       <a href="/grindelwald" on:click={() => toggleStyle(false)}>Grindelwald</a>
   </div>
 </nav>
@@ -44,6 +47,7 @@
 </div>
 
 <script>
+  import Menu from "$lib/menu.svelte";
   let scene =1;
 
   let isStyled = false; // Function to toggle the style 
@@ -52,6 +56,33 @@
     isStyled = a;
   }
 
+  let menureiter = [
+    {
+      label: "Wilkommen",
+      link: "/wilkommen",
+      sub: false
+    },
+    {
+      label: "Blockdiagram",
+      link: "/blockdiagram",
+      sub: false
+    },
+    {
+      label: "Orte",
+      link: "#",
+      sub: true
+    },
+    {
+      label: "Impressum",
+      link: "/impressum",
+      sub: false
+    },
+    {
+      label: "Quellen",
+      link: "/Quellen",
+      sub: false
+    },
+  ]
 
 </script>
 
@@ -195,7 +226,7 @@ li a:hover {
   height: 400px;
   width: 200px;
   flex-direction: column;
-  background-color: beige;
+  background-color: rgba(177, 172, 172, 0.961);
   visibility: visible;
 }
 

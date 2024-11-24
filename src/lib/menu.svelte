@@ -29,8 +29,8 @@
 <!--{isStyled ? 'styled' : ''}-->
 <div class="submenu {isStyled ? 'styled' : ''}">
     <ul>
-        <li><a href="/findelen" on:click={() => setStyle(true)}>Findelen</a></li>
-        <li><a href="/grindelwald" on:click={() => setStyle(true)}>Grindelwald</a></li>
+        <li><a href="/TapRepWeb/findelen" on:click={() => setStyle(true)}>Findelen</a></li>
+        <li><a href="/TapRepWeb/grindelwald" on:click={() => setStyle(true)}>Grindelwald</a></li>
     </ul>
 </div>
 

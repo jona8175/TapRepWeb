@@ -60,12 +60,12 @@
   let menureiter = [
     {
       label: "Wilkommen",
-      link: "/",
+      link: "/TapRepWeb/",
       sub: false
     },
     {
       label: "Blockdiagram",
-      link: "/blockdiagram",
+      link: "/TapRepWeb/blockdiagram",
       sub: false
     },
     {
@@ -75,12 +75,12 @@
     },
     {
       label: "Impressum",
-      link: "/impressum",
+      link: "/TapRepWeb/impressum",
       sub: false
     },
     {
       label: "Quellen",
-      link: "/Quellen",
+      link: "/TapRepWeb/Quellen",
       sub: false
     },
   ]

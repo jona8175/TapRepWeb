@@ -60,7 +60,7 @@
   let menureiter = [
     {
       label: "Wilkommen",
-      link: "/wilkommen",
+      link: "/",
       sub: false
     },
     {
@@ -184,7 +184,7 @@ li a:hover {
   display: none;
   position: absolute;
   top: 55px;
-  margin-left: 290px;
+  margin-left: 500px;
   overflow: hidden;
   background: var(--background_sec);
   z-index: 1;

@@ -217,7 +217,7 @@
 </div>
 
 <div class="instruction_box {isStyled ? 'styled' : ''} ">
-    <img class="centered_img" src="/src/Instructions.png" alt="Instructions" width="80%" height="80%">
+    <img class="centered_img" src="src/Instructions.png" alt="Instructions" width="80%" height="80%">
     <br>
     <a on:click={() => toggleStyle_Inst()} > Tipp Auflösen </a>
 </div>

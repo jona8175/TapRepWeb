@@ -1,6 +1,5 @@
 <div class="sheet">
   <h1>Wilkommen</h1>
-  <h1>Hi</h1>
   <a
     >Auf dieser Website werden Veränderungen rund um Alpine Gletscher und ihre
     Umgebung behandelt. In 3D visualisierten Zeitreihen werden die Veränderungen

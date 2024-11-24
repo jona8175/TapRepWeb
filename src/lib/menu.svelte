@@ -1,6 +1,4 @@
 
-<h1>Menu does not Work at all</h1>
-
 <script>
     export let menupoints=[];
 
@@ -31,8 +29,8 @@
 <!--{isStyled ? 'styled' : ''}-->
 <div class="submenu {isStyled ? 'styled' : ''}">
     <ul>
-        <li><a href="#" on:click={() => setStyle(true)}>Findelen</a></li>
-        <li><a href="#" on:click={() => setStyle(true)}>Grindelwald</a></li>
+        <li><a href="/findelen" on:click={() => setStyle(true)}>Findelen</a></li>
+        <li><a href="/grindelwald" on:click={() => setStyle(true)}>Grindelwald</a></li>
     </ul>
 </div>
 

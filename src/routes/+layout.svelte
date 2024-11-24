@@ -4,8 +4,8 @@
 
 <Menu menupoints = {menureiter}></Menu>
 
+<!--
 <div class = "bar"></div>
-
 <nav class = "menu">
   <input type="checkbox" id="check">
   <label for="check" class ="checkbtn">
@@ -24,8 +24,9 @@
       <a href="/grindelwald" on:click={() => toggleStyle(false)}>Grindelwald</a>
   </div>
 </nav>
+-->
 
-<!--Help-->
+<!--Help
 <div class="helpbox {isStyled ? 'styled' : ''}">
   <div>
     <h1>Help</h1>
@@ -40,7 +41,7 @@
   </div>
   
 </div>
-
+-->
 <!-- im slot ist der inhalt der sub-page-->
 <div class = "scene">
   <slot></slot>
@@ -50,9 +51,9 @@
   import Menu from "$lib/menu.svelte";
   let scene =1;
 
-  let isStyled = false; // Function to toggle the style 
+  let isStyled_Inst = false; // Function to toggle the style 
 
-  function toggleStyle(a) { 
+  function toggleStyle_Inst(a) { 
     isStyled = a;
   }
 

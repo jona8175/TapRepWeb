@@ -176,6 +176,14 @@
     }
     
   });
+
+  // instruction box
+  let isStyled = false;
+
+  function toggleStyle_Inst(a) { 
+    isStyled = !a;
+  }
+
 </script>
 
 <div bind:this={root} class="bind-div">
@@ -208,8 +216,40 @@
   </body>
 </div>
 
-<style>
+<div class="instruction_box {isStyled ? 'styled' : ''} ">
+    <img class="centered_img" src="/src/Instructions.png" alt="Instructions" width="80%" height="80%">
+    <br>
+    <a on:click={() => toggleStyle_Inst()} > Tipp Auflösen </a>
+</div>
 
+<style>
+  .instruction_box{
+    z-index: 4;
+    position: absolute;
+    top: 70%;
+    right: 30%;
+    height: 10%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgba(177, 172, 172, 0.961);
+    visibility: visible;
+  }
+  .instruction_box.a {
+    cursor: pointer !important;
+  }
+  
+  .centered_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: auto;
+  }
+  .instruction_box.styled {
+    visibility: hidden;
+  }
   body {
     height: 100%;
     width: 100%;

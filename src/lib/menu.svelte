@@ -69,7 +69,7 @@
     .submenu{
         position: absolute;
         top: 34px;
-        left: 284px;
+        left: 267px;
         z-index: 29;
         visibility: visible;
         display: block;

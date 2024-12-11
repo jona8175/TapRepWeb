@@ -14,7 +14,7 @@
   
     let models = ["GrindScene1.gltf","GrindScene2.gltf","GrindScene3.gltf","GrindScene4.gltf","GrindScene5.gltf","GrindScen6.gltf","GrindScene7.gltf","GrindScene8.gltf","GrindScene9.gltf","GrindScene10.gltf","GrindScene11.gltf","GrindScene12.gltf","GrindScene13.gltf","GrindScene14.gltf","GrindScene15.gltf","GrindScene16.gltf","GrindScene17.gltf","GrindScene18.gltf"];
   
-    let cameraInitialPosition = new THREE.Vector3(-2,1,1);
+    let cameraInitialPosition = new THREE.Vector3(-2,0.5,2);
   
     let light_type = "DroneImageScene" /*DroneImageScene or 3DModel*/
   

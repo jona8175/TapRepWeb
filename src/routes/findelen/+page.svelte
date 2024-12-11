@@ -14,7 +14,7 @@
 
   let models = ["Scene1.gltf","Scene2.gltf","Scene3.gltf","Scene4.gltf","Scene5.gltf","Scene6.gltf","Scene7.gltf","Scene8.gltf","Scene9.gltf","Scene10.gltf"];
 
-  let cameraInitialPosition = new THREE.Vector3(-2,1,1);
+  let cameraInitialPosition = new THREE.Vector3(-1,2,0.6);
 
   let light_type = "DroneImageScene" /*DroneImageScene or 3DModel*/
 

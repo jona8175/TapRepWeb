@@ -6,7 +6,9 @@
       position: new THREE.Vector3(0.05, 0.35, -0.3),
       canvasCordinates: new THREE.Vector2(3, 0),
       label: "Gletscher",
-      text: "Gletscher sind große Eismassen, die sich unter ihrem eigenen Gewicht aktiv bewegen.",
+      text: "mehr Information",
+      textlink: "https://www.swisseduc.ch/glaciers/index-de.html",
+    
     },
     {
       position: new THREE.Vector3(-0.17, 0.22, -0.1),

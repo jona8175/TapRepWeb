@@ -203,7 +203,7 @@
         {:else}
           <div class="label">{point.label}</div>
         {/if}
-        <div class="text">{point.text}</div>
+        <div class="text"> <a href= {point.textlink}> {point.text} </a> </div>
       </div>
     {/each}
 

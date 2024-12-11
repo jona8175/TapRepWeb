@@ -31,6 +31,7 @@
     <ul>
         <li><a href="/findelen" on:click={() => setStyle(true)}>Findelen</a></li>
         <li><a href="/grindelwald" on:click={() => setStyle(true)}>Grindelwald</a></li>
+        <li><a href="/silveretta" on:click={() => setStyle(true)}>Silveretta</a></li>
     </ul>
 </div>
 

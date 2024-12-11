@@ -14,7 +14,7 @@
         <div class = "image_box">
           <div class="container">
             <a href="/blockdiagram">
-              <img  src="/Blockbild.jpeg" alt="Image">
+              <img  src="blockdiagram_img.png" alt="Image">
             </a>
           </div>
         </div>
@@ -34,7 +34,7 @@
         <div class = "image_box">
           <div class="container"> 
             <a href="/findelen">
-              <img  src="/Scene.jpeg" alt="Image">
+              <img  src="scenen_img.png" alt="Image">
             </a>
           </div>
         </div>

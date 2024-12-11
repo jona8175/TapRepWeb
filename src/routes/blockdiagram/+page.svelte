@@ -28,7 +28,7 @@
       position: new THREE.Vector3(0, 0.6, 0.25),
       canvasCordinates: new THREE.Vector2(3, 0),
       label: "Gletscher Vorfeld",
-      text: "",
+      text: " ",
     },
     {
       position: new THREE.Vector3(0.28, 0.22, -0.1),
@@ -42,6 +42,7 @@
       canvasCordinates: new THREE.Vector2(3, 0),
       label: "Massenbewegung",
       text: "",
+    }
     {
       position: new THREE.Vector3(-0.25, 0.25, 0.4),
       canvasCordinates: new THREE.Vector2(0, 0),

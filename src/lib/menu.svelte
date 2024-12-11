@@ -31,6 +31,7 @@
     <ul>
         <li><a href="/TapRepWeb/findelen" on:click={() => setStyle(true)}>Findelen</a></li>
         <li><a href="/TapRepWeb/grindelwald" on:click={() => setStyle(true)}>Grindelwald</a></li>
+        <li><a href="/TapRepWeb/silveretta" on:click={() => setStyle(true)}>Silveretta</a></li>
     </ul>
 </div>
 

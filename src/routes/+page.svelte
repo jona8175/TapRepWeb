@@ -1,112 +1,58 @@
 <div class="sheet">
-<div style="overflow:auto;" class="textbox">
+<div class="textbox">
   
-    <h1>Wilkommen</h1>
+    <h1>Glazial-geomorphologische Phänomene in Gletschervorfeldern </h1>
 
-    <a>Auf dieser Website werden Veränderungen rund um Alpine Gletscher und ihre
-        Umgebung behandelt. In 3D visualisierten Zeitreihen werden die Veränderungen
-        genauer beleuchtet und erklärt.</a>
+    <a>Gletscher sind mächtige und dynamische Landschaftsgestalter. Mit ihrer enormen Kraft formen sie die Erde: Sie erodieren den Untergrund, transportieren Sedimente und lagern diese wieder ab. In Gebirgsregionen wie den Alpen haben Gletscher einen beeindruckenden Formenschatz hinterlassen – von tiefen Trogtälern und kleinskaligen Schliffspuren bis hin zu mächtigen Moränenbastionen. Heute, unter dem Einfluss des Klimawandels, ziehen sich die Gletscher weltweit zurück. Dabei entstehen sich rasant verändernde Gletschervorfelder, in denen die Auswirkungen von glazialen Erosions- und Sedimentationsprozessen deutlich zu erkennen sind. Diese Webseite zeigt in 3D visualisierten Zeitreihen die aktuellen Veränderungen in ausgewählten Gletschervorfeldern und lädt dazu ein, diese spannenden Prozesse zu entdecken und zu erforschen. </a>
     
-    <h2>Inhaltsverzeichnis</h2>
-    <a>Erfahre in der Einführung, was es mit dieser Website auf sich hat.<br /><br
-      /></a
-    >
-    <a
-      >Lerne in den folgenden Abschnitten mehr über den Klimawandel,
-      Gletscherdynamik und entdecke danach konkrete Beispielen.<br /><br /></a
-    >
-  
-    <h2>Einführung</h2>
-    <a
-      >Dass sich Gletscher mit ihren Eismassen dynamisch talwärts bewegen, ist ein
-      glaziologisches Phänomen, das schon vor langer Zeit erkannt wurde. Obwohl
-      Eis ein Feststoff ist, verhält es sich unter grossem Druck zähplastisch und
-      fliesst unter dem Einfluss der Schwerkraft zu Tal. Das Gletschereis verformt
-      sich unter Druck- und Zugkräften und beginnt an der Gletschersohle zu
-      gleiten. Diese dynamische Bewegung des Gletschers ist für menschliche
-      Beobachter zwar sehr langsam, aber im Vergleich zur Erosion von Gebirgszügen
-      oder den Bewegungen von tektonischen Platten ist die Geschwindigkeit der
-      Gletscher deutlich höher und beeinflusst die Umgebung erheblich. Der
-      Klimawandel beinflusst viele Prozesse, so beschleunigt er auch viele
-      hochalpinen Prozesse prominentes Beispiel ist das immer schnellere
-      Rückschmelzen der Gletscher. In den dadurch freigelegten Gletscher
-      Vorfeldern können zahlreiche Veränderungen beobachtet werden: Flüsse ändern
-      ihren Lauf, Moränen erodieren schnell und Pflanzen besiedeln neue Gebiete.
-      Um solche Prozesse zu dokumentieren und zu beobachten, werden seit 2012 bei
-      rund 100 Gletschern und ihren Vorfeldern jährlich Höhenunterschiede gemessen
-      und Orthofotos erstellt. Orthofotos sind entzerrte, massstabsgetreue
-      Luftbildaufnahmen, ähnlich wie Satellitenbilder, hier jedoch mit einer
-      Auflösung von bis zu 10cm pro Pixel. Mit diesen Orthofotos und Höhenmodellen
-      lassen sich digitale 3D-Modelle erstellen, die auf dieser Webseite
-      betrachtet und genutzt werden können.
-    </a>
-    <h2>Klimawandel</h2>
-    <a
-      >Klima ist der langjährige Durchschnitt des Wetters, also der Zustand der
-      Atmosphäre an einem Ort über einen längeren Zeitraum. Verändert sich der
-      Zustand und Zusammensetzung der Atmosphäre, verändert sich auch das Wetter
-      und somit über lange Zeit auch das Klima. <br /> <br />
-  
-      Die Zusammensetzung und der Aufbau der Erdatmosphäre sind entscheidend für
-      das Leben auf der Erde. Die Atmosphäre schützt vor schädlicher
-      Sonnenstrahlung und hält die Erde warm genug, damit Wasser in flüssiger,
-      fester und gasförmiger Form existieren kann. Momentan verändert der Mensch
-      durch den Ausstoss von Emissionen wie beispielsweise CO2 und durch die
-      Veränderung von Ökosystemen die Zusammensetzung der Atmosphäre sehr stark,
-      was über den Treibhauseffekt die Durchschnittstemperatur der Atmosphäre
-      ansteigen lässt. Eine der damit verbundenen Folgen ist der starke Rückgang
-      der Gletscher weltweit. Im Folgenden wird erklärt, welche Auswirkungen dies
-      auf die Zungenbereiche mit den Gletschervorfelder hat.<br /> <br />
-  
-      Die dynamisch fliessenden Gletscher und die damit verbundenen Prozesse
-      prägen massgeblich die Landschaft. Geomorphologische Phänomene in der
-      direkten Umgebung eines Gletschers können viel über den vergangenen und
-      aktuellen Zustand der Gletscher aussagen. Zum Beispiel gibt die Position von
-      Moränen Aufschluss über die Ausdehnung eines früheren Gletscherstands,
-      während die Form der Gletscherzunge anzeigt, ob ein Gletscher vorstösst oder
-      sich zurückzieht.<br /> <br />
-  
-      Im Folgenden wird das Verhalten von Gletschern genauer erklärt.
-      Anschliessend werden die geomorphologischen Phänomene an der Gletscherzunge
-      und im Gletschervorfeld erläutert und erklärt, was daraus ablesen werden
-      kann.
-    </a>
-    <h2>Gletscherdynamik</h2>
-    <a>
-      Für das Entstehen von Gletschern sind zwei Bedingungen relevant: Es braucht
-      Niederschlag in Form von Schnee und über Jahrzehnte eine mittlere
-      Jahrestemperatur unter dem Gefrierpunkt. Solche Bedingungen finden sich in
-      den höheren Lagen der Alpen. In diesen Gebieten lagert sich mehr Schnee an,
-      als schmilzt. Durch die Ansammlung der jährlichen Schneemassen entsteht
-      Firn, der sich unter Druck in Eis verwandelt (Akkumulation = Massengewinn).
-      Die Eismasse des Gletschers fliesst unter dem Einfluss der Schwerkraft
-      talwärts in wärmere Regionen, wo an der Gletscherzunge Schmelzprozesse
-      dominieren (Ablation = Massenverlust). <br /><br />
-      Ein Gletscher ist eng mit dem Klimasystem und dessen Elementen (Temperatur, Niederschlag,
-      Strahlung, etc.) gekoppelt. Dieses Zusammenspiel wird als Massenhaushalt bezeichnet.
-      Im Winter lagern sich mehrere Meter Schnee auf dem Gletscher an. In den wärmeren
-      Sommermonaten schwindet zuerst die Schneedecke und danach schmilzt in tieferen
-      Lagen das Eis, wobei mehrere Meter Eis verloren gehen können. In höher gelegenen
-      Gebieten fällt mehr Schnee, als das schmilzt (Akkumulationsgebiet), während in
-      tiefer gelegenen Regionen mehr Eis schmilzt (Ablationsgebiet). Die Gleichgewichtslinie
-      bezeichnet die Grenze zwischen Akkumulations- und Ablationsgebiet. Da Schneefall
-      und Schmelze variieren, verändert sich die Höhe der Gleichgewichtslinie über
-      die Jahre. Wenn jedoch über Jahre hinweg weniger Schnee akkumuliert als Eis schmilzt,
-      ist der Massenhaushalt negativ, und die gesamte Eismasse des Gletschers nimmt
-      ab. Das Ablationsgebiet wird grösser, das Akkumulationsgebiet kleiner und die
-      Höhe der Gleichgewichtslinie steigt an. Ein Gletscher ist daher ein leicht verständlicher
-      Klimaindikator, an dem man einen klaren Trend ablesen kann. Je wärmer es wird,
-      desto höher liegt die Gleichgewichtslinie und desto mehr Eis schmilzt.
-    </a>
+    <div>
+      <h1>Schematisches Blockdiagramm</h1>
+      <div class = "row_box">
+        <div class = "imagetext_box">
+          <a>Was ist ein Sander? Wie entsteht ein Rundhöcker? Wo findet man einen Toteissee? Entdecke die vielfältigen Formen der Erosions- und Sedimentationsprozesse in einer alpinen Gletscherlandschaft. Im interaktiven Blockdiagramm sind diese Phänomene lokalisiert. Weblinks bieten Zugang zu weiterführenden Informationen und Erklärungen.</a>
+        </div>
+        <div class = "image_box">
+          <div class="container">
+            <a href="/blockdiagram">
+              <img  src="/src/blockdiagram_img.png" alt="Image">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <h1>Gletschervorfelder erkunden</h1>
+      <h2>Übersichtsdiagramme von Geltschervorfeldern</h2>
+      <a>Entdecke die glazial-geomorphologischen Spuren in den Vorfeldern von Findelen-, Grindelwald- und Silvretta-Gletscher. Die 3D-Darstellungen basieren auf aktuellen, hochaufgelösten Bild- und Höhendaten. Um die enorme Datenmenge für den Webzugriff zu bewältigen, wurden die 3D-Übersichtsdiagramme der Gletschervorfelder für diesen Zweck optimiert und komprimiert.</a>
+      <br>
+      <br>
+      <div class = "row_box">
+        <div class = "imagetext_box">
+          <a>Was ist ein Sander? Wie entsteht ein Rundhöcker? Wo findet man einen Toteissee? Entdecke die vielfältigen Formen der Erosions- und Sedimentationsprozesse in einer alpinen Gletscherlandschaft. Im interaktiven Blockdiagramm sind diese Phänomene lokalisiert. Weblinks bieten Zugang zu weiterführenden Informationen und Erklärungen.</a>
+        </div>
+        <div class = "image_box">
+          <div class="container"> 
+            <a href="/findelen">
+              <img  src="/src/scenen_img.png" alt="Image">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <h1>Das Gletscherfliessen als Motor der Veränderungen </h1>
+    <a>Die dynamischen Veränderungen in Gletschervorfeldern verdeutlichen, wie stark Gletscher ihre Umgebung gestalten. Während Abschmelzen und Rückzug sichtbare Spuren im Vorfeld hinterlassen, bleibt das ständige Fliessen der Gletscher oft verborgen. Das Fliessen ist schwer zu erkennen, da es nicht direkt beobachtbar ist und von den starken Schmelzprozessen überlagert wird. Angetrieben durch das Gewicht des Eises und die Wirkung der Schwerkraft bewegen sich Gletscher kontinuierlich talwärts. Diese Fliessbewegung hat eine doppelte Wirkung: Sie erodiert den Untergrund und transportiert Sedimente, die z.B. im Vorfeld abgelagert werden. Solche Prozesse haben seit der Eiszeit Landschaften bis ins Flachland geformt und prägen noch heute die schnell schwindenden Gletschervorfelder mit markanten Geländeformen. Das Fliessen der Gletscher lässt sich durch Modell-Experimente mit einem „Gletscher Goo“ anschaulich nachvollziehen. Videos dieser Experimente bieten spannende 
+      Einblicke und stehen hier zur Verfügung: LINK </a>
   
 </div>
 </div>
 
 <style>
     .sheet{
-        margin-right: 50px;
-        margin-left: 50px;
-        background-color: white;
+        margin-right: 25px;
+        margin-left: 25px;
+        background-color: rgb(255, 255, 255);
         overflow:auto;
     }
     .textbox{
@@ -114,8 +60,47 @@
         margin-bottom: 100px;
         margin-right: 100px;
         margin-left: 40px;
-        background-color: white;
         overflow:auto;
     }
+    .row_box{
+      display:flex;
+      flex-direction:row;
+    }
+    .imagetext_box{
+
+      display:flex;
+      flex-direction:column;
+      width: 40%;
+
+    }
+    .image_box{
+
+    display:flex;
+    flex-direction:column;
+    width: 60%;
+
+    }
+    .container { 
+      margin-left: 10%;
+
+      width: 90%; /* Make the container take up the full width */ 
+      height: auto; /* Keep the height auto to maintain aspect ratio */ 
+      max-width: 300px; /* Set a maximum width */ 
+      max-height: 476px; /* Set a maximum height */ 
+      overflow: hidden; /* Hide any overflow content */ 
+      justify-content: center;
+    } 
+    .container img { 
+      border: 10px solid rgba(120, 120, 120, 0.775);
+      width: 90%; /* Make the image fill the container's width */ 
+      height: auto; /* Maintain aspect ratio */ 
+      max-width: 100%; /* Ensure the image does not exceed the container's width */ 
+      max-height: 100%; /* Ensure the image does not exceed the container's height */ 
+      border-color: none;
+    }
+    .container img:hover { 
+      border: 10px solid rgb(95, 95, 154);
+    }
+
 
 </style>

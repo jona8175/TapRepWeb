@@ -42,7 +42,7 @@
       canvasCordinates: new THREE.Vector2(3, 0),
       label: "Massenbewegung",
       text: "",
-    }
+    },
     {
       position: new THREE.Vector3(-0.25, 0.25, 0.4),
       canvasCordinates: new THREE.Vector2(0, 0),
